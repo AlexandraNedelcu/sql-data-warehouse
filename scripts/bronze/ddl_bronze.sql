@@ -8,7 +8,6 @@ Script Purpose:
 	  Run this script to re-define the DDL structure of 'bronze' Tables
 ===============================================================================
 */
-
 IF OBJECT_ID('bronze.crm_cust_info','U') IS NOT NULL
     DROP TABLE bronze.crm_cust_info;
 CREATE TABLE bronze.crm_cust_info (
@@ -16,7 +15,7 @@ CREATE TABLE bronze.crm_cust_info (
     cst_key NVARCHAR(50),
     cst_firstname NVARCHAR(50),
     cst_lastname NVARCHAR(50),
-    cst_material_status NVARCHAR(50),
+    cst_marital_status NVARCHAR(50),
     cst_gndr NVARCHAR(50),
     cst_create_date DATE
 );
@@ -36,7 +35,7 @@ CREATE TABLE bronze.crm_prd_info (
 IF OBJECT_ID('bronze.crm_sales_details','U') IS NOT NULL
     DROP TABLE bronze.crm_sales_details;
 CREATE TABLE bronze.crm_sales_details (
-    sls_ord_num INT,
+    sls_ord_num NVARCHAR(50),
     sls_prd_key NVARCHAR(50),
     sls_cust_id INT,
     sls_order_dt INT,
